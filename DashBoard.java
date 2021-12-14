@@ -21,8 +21,7 @@ public class DashBoard extends JFrame implements ActionListener{
 		m2.setForeground(Color.ORANGE);
 		mb.add(m2);
 		
-		i1 = new JMenu("RECEPTION");
-	
+		i1 = new JMenu("MENU");
 		i1.addActionListener(this);
 		m1.add(i1);
 		
@@ -33,6 +32,10 @@ public class DashBoard extends JFrame implements ActionListener{
 		i3 = new JMenu("ABOUT US :)");
 		i3.addActionListener(this);
 		m2.add(i3);
+		
+// 		i4 = new JMenuItem("ORDERS");
+// 		i4.addActionListener(this);
+// 		m1.add(i4);
 
 		mb.setBounds(0,0,1950,30);
 		 ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("pics/gg.jpg"));
@@ -53,10 +56,12 @@ public class DashBoard extends JFrame implements ActionListener{
 		setVisible(true);
 	}
 	public void actionPerformed(ActionEvent e) {
-		if(e.getActionCommand().equals("RECEPTION")) {
+		if(e.getActionCommand().equals("MENU")) {
 			
 		}else if (e.getActionCommand().equals("DETAILS")) {
 			new Details().setVisible(true);
+		}else if (ae.getActionCommand().equals("ABOUT US :)")) {
+			new About().setVisible(true);
 		}
 	}
 
